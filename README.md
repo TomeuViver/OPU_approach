@@ -35,6 +35,11 @@ ls -lh dna-sequences-rename.fasta
 ```
 This file <span style="color:red;">dna-sequences-rename.fasta</span> contains the representative ASVs sequences that we will classify into OPUs.
 
+Read the file:
+```bash
+less dna-sequences-rename.fasta
+```
+
 ### **Step 5: Launch the ARB Program**
 To start the ARB software, run:
 ```bash
