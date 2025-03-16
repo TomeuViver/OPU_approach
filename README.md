@@ -15,10 +15,10 @@ By the end of this session, you will be able to:
 ## **1. Download and Prepare the SILVA Database**
 The [SILVA database] (https://www.arb-silva.de/download/arb-files/) is commonly used for phylogenetic classification of ribosomal RNA sequences. We will use the **SILVA Release 138.2 Ref NR 99** as our reference.
 
-### **Step 1: Visit the SILVA Database Webpage**
+###  **Visit the SILVA Database Webpage**
 [https://www.arb-silva.de/download/arb-files/](https://www.arb-silva.de/download/arb-files/)
 
-### **Step 2: OPEN THE WORKING FOLDER**
+### **OPEN THE WORKING FOLDER**
 
 Open the working folder:
 ```bash
@@ -28,20 +28,12 @@ The file <span style="color:red;">SILVA_138.1_SSURef_NR99_CAME_3.arb</span> is t
 
 ---
 
-## **2. Preparing Your Working Environment**
-
-### **Step 3: Set Up the Working Directory**
-Navigate to the working directory where we will perform the OPU analysis:
+## **ASV Representative Sequences**
+The ASV representative sequences generated from QIIME2 are within the working directory:
 ```bash
-cd /home/vmuser/Desktop/OPUs
+ls -lh dna-sequences-rename.fasta
 ```
-
-### **Step 4: Copy ASV Representative Sequences**
-The ASV representative sequences generated from QIIME2 must be transferred to the working directory:
-```bash
-cp /home/vmuser/Desktop/QIIME2/dna-sequences-rename.fasta .
-```
-This file contains the representative sequences that we will classify into OPUs.
+This file <span style="color:red;">dna-sequences-rename.fasta</span> contains the representative ASVs sequences that we will classify into OPUs.
 
 ### **Step 5: Launch the ARB Program**
 To start the ARB software, run:
@@ -60,13 +52,13 @@ To integrate the taxonomic information with the ASV table, we will merge **table
 
 First, move to the Desktop:
 ```bash
-cd /home/vmuser/Desktop/
+cd /home/vmuser/Desktop/QIIME2
 ```
 
-#### **Copy the required files:**
+#### **Required files:**
 ```bash
-cp /home/vmuser/Desktop/QIIME2/table_otus_rename.csv .
-cp /home/vmuser/Desktop/OPUS/OPUs_OTUs_relation.csv .
+ls table_otus_rename.csv
+ls OPUs_OTUs_relation.csv .
 ```
 
 #### **Format and merge the files:**
@@ -90,7 +82,7 @@ Execute the script with:
 ### **Step 8: Examine the Output**
 Once the script finishes running, open the output table:
 ```bash
-less output_OPUs.csv
+column -t output_OPUs.csv | less
 ```
 This file provides a summary of the distribution of OPUs across different samples.
 
