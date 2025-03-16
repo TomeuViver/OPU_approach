@@ -18,13 +18,13 @@ The [SILVA database] (https://www.arb-silva.de/download/arb-files/) is commonly 
 ### **Step 1: Visit the SILVA Database Webpage**
 [https://www.arb-silva.de/download/arb-files/](https://www.arb-silva.de/download/arb-files/)
 
-### **Step 2: Download the Required Database**
-To download the SILVA reference database, use the following command:
+### **Step 2: OPEN THE WORKING FOLDER**
+
+Open the working folder:
 ```bash
-wget 'https://disc-genomics.uibk.ac.at/data/CAME_SSU.tar.gz' -O - | tar -zx
-cd VM_CAME
+cd /home/vmuser/Desktop/QIIME2
 ```
-This will fetch and extract the required database for later use in ARB.
+The file <span style="color:red;">SILVA_138.1_SSURef_NR99_CAME_3.arb</span> is the reduced SILVA file that we will use during the workshop.
 
 ---
 
